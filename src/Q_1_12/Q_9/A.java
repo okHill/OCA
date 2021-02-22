@@ -7,6 +7,7 @@ package Q_1_12.Q_9;
         }
 
         public static void main(String[] args) {
+
             A a = new A();
         }
     }

@@ -4,11 +4,15 @@ interface Exportable {
 
     void export();
 
+    // abstract interface method cannot have a body.
+
+    // interface without access modifier is public
+
 }
 
 class Tool implements Exportable {
 
-    public void export() {       // line n1
+        public void export() {       // line n1
 
         System.out.println("Tool::export");
     }
@@ -22,6 +26,7 @@ class ReportTool extends Tool implements Exportable {
     }
 
     public static void main(String[] args) {
+
         Tool aTool = new ReportTool();
         Tool bTool = new Tool();
 
@@ -30,6 +35,7 @@ class ReportTool extends Tool implements Exportable {
     }
 
     public static void callExport(Exportable ex) {
+
         ex.export();
     }
 //    What is the restul?
